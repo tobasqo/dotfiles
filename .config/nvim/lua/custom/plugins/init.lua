@@ -17,4 +17,27 @@ return {
     vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<CR>'),
     vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<CR>'),
   },
+
+  { 'windwp/nvim-ts-autotag' },
+
+  { 'echasnovski/mini.move' },
+
+  { 'nvim-treesitter/nvim-treesitter-context' },
+
+  {
+    'kdheepak/lazygit.nvim',
+    cmd = {
+      'LazyGit',
+      'LazyGitConfig',
+      'LazyGitCurrentFile',
+      'LazyGitFilter',
+      'LazyGitFilterCurrentFile',
+    },
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
+    keys = {
+      { '<leader>lg', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
+    },
+  },
 }
