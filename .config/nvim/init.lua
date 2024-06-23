@@ -65,6 +65,12 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Navigate vim panes better
+vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
+vim.keymap.set('n', '<C-j>', ':wincmd j<CR>')
+vim.keymap.set('n', '<C-k>', ':wincmd k<CR>')
+vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -783,7 +789,6 @@ require('lazy').setup({
         'python',
         'javascript',
         'json',
-        'markdown-inline',
         'toml',
         'tsx',
         'typescript',
