@@ -71,6 +71,10 @@ vim.keymap.set('n', '<C-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
 
+vim.keymap.set('n', '<C-s>', ':w<CR>')
+vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>')
+vim.keymap.set('i', '<C-c>', '<Esc><CR>')
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
