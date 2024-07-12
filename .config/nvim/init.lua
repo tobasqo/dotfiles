@@ -1,3 +1,6 @@
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
@@ -74,6 +77,7 @@ vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
 vim.keymap.set('n', '<C-s>', ':w<CR>')
 vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>')
 vim.keymap.set('i', '<C-c>', '<Esc><CR>')
+vim.keymap.set('n', 'J', '<nop>', { noremap = true, silent = true })
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -872,3 +876,14 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+vim.api.nvim_create_autocmd('VimEnter', {
+  group = vim.api.nvim_create_augroup('Neotree_start_directory', { clear = true }),
+  desc = 'Start Neo-tree with directory',
+  once = true,
+  callback = function()
+    if vim.fn.isdirectory(vim.fn.argv(0)) then
+      vim.cmd 'Neotree reveal'
+    end
+  end,
+})
