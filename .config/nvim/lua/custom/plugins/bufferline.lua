@@ -2,7 +2,7 @@ return {
   "akinsho/bufferline.nvim",
   event = "VeryLazy",
   keys = {
-    { "<leader>bd", "<cmd>bd<cr>", desc = "Delete current buffer" },
+    -- { "<leader>bd", "<cmd>bp<bar>bd<cr>", desc = "Delete current buffer" },
     { "<leader>br", "<Cmd>BufferLineCloseRight<CR>", desc = "Delete Buffers to the Right" },
     { "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", desc = "Delete Buffers to the Left" },
     { "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
@@ -24,9 +24,9 @@ return {
           },
         },
         show_buffer_icons = true,
-        show_buffer_close_icons = true,
-        show_close_icon = true,
-        separator_style = "thin",
+        show_buffer_close_icons = false,
+        show_close_icon = false,
+        separator_style = "silent",
         always_show_bufferline = true,
       },
     })
