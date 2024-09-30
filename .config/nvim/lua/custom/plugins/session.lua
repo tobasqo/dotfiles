@@ -5,17 +5,14 @@ return {
   },
   config = function()
     require("auto-session").setup({
+      auto_restore = true,
+      auto_restore_last_session = false,
+      auto_save = true,
+      enabled = true,
       log_level = "info",
-      auto_save_enabled = true,
-      auto_restore_enabled = true,
-      auto_session_enable_last_session = false,
-      auto_session_root_dir = vim.fn.stdpath("data") .. "/sessions/",
-      auto_session_enabled = true,
-      auto_session_suppress_dirs = nil,
-      auto_session_use_git_branch = true,
-      bypass_session_save_file_types = nil,
-      -- pre_save_cmds = { "tabdo Neotree close" },
       post_restore_cmds = { "Neotree" },
+      root_dir = vim.fn.stdpath("data") .. "/sessions/",
+      use_git_branch = true,
     })
   end,
 }
