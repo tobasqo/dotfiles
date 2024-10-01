@@ -72,6 +72,8 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+vim.keymap.set("i", "jk", "<ESC><CR>")
+
 -- Navigate vim panes better
 vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
@@ -148,6 +150,22 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require("lazy").setup({
+  {
+    "folke/persistence.nvim",
+    lazy = false,
+    event = "BufReadPre",
+    opts = {
+      dir = vim.fn.stdpath("state") .. "/sessions/",
+      need = 0,
+      branch = true,
+    },
+    --stylua: ignore
+    keys = {
+      { "<leader>ql", function() require("persistence").load({ last = true }) end, "Restore Session" },
+      { "<leader>qS", function() require("persistence").select() end, "Select Session" },
+      { "<leader>qs", function() require("persistence").save() end, "Save Session" },
+    },
+  },
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
@@ -803,6 +821,7 @@ require("lazy").setup({
         "tsx",
         "typescript",
         "yaml",
+        "go",
       },
       -- Autoinstall languages that are not installed
       auto_install = true,
@@ -874,6 +893,12 @@ require("lazy").setup({
       lazy = "💤 ",
     },
   },
+})
+
+vim.api.nvim_create_autocmd("VimLeavePre", {
+  callback = function()
+    require("persistence").save()
+  end,
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
