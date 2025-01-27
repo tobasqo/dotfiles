@@ -68,3 +68,10 @@ export NVM_DIR="$HOME/.nvm"
 eval $(thefuck --alias fk)
 
 export PATH=$PATH:/usr/local/go/bin
+export CC=clang
+export CXX=clang++
+
+alias htop="glances"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+

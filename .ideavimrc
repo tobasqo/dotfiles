@@ -68,7 +68,7 @@ nmap <leader>p "+p
 nmap <leader>P "+P
 vmap <leader>p "+p
 vmap <leader>P "+P
-imap <C-v> "+p
+imap <C-v> <Esc>"+pi
 
 " tabs
 nmap H <Action>PreviousTab<CR>
