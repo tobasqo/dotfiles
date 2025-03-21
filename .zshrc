@@ -75,3 +75,5 @@ alias htop="glances"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
