@@ -81,8 +81,8 @@ return {
       vim.cmd.colorscheme("github_dark_dimmed")
 
       -- export colors palette
-      local palette = require("github-theme.palette").load("github_dark_dimmed")
-      vim.fn.writefile(vim.inspect(palette), "theme_colors.txt")
+      -- local palette = require("github-theme.palette").load("github_dark_dimmed")
+      -- vim.fn.writefile(vim.inspect(palette), "theme_colors.txt")
     end,
   },
   {

@@ -15,7 +15,7 @@
     "window.newWindowDimensions": "maximized",
     // theme
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Night Owl (No Italics)",
+    "workbench.colorTheme": "Default Dark+",
     "editor.semanticTokenColorCustomizations": {
         "[Default Dark+]": {
             "enabled": true,
@@ -246,9 +246,6 @@
     "python.analysis.autoImportCompletions": true,
     "python.analysis.inlayHints.callArgumentNames": "partial",
     "python.analysis.autoFormatStrings": true,
-    "python.analysis.inlayHints.functionReturnTypes": true,
-    "python.analysis.inlayHints.pytestParameters": true,
-    "python.analysis.inlayHints.variableTypes": true,
     "debugpy.showPythonInlineValues": true,
     // mypy
     "mypy.dmypyExecutable": "${workspace}/.venv/bin/dmypy",
@@ -256,4 +253,16 @@
     "mypy.configFile": "pyproject.toml",
     // ruff
     "ruff.configuration": "pyproject.toml",
+    "python.analysis.typeEvaluation.strictListInference": true,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.idea": true,
+        "**/.mypy_cache": true,
+        "**/.pytest_cache": true,
+        "**/.ruff_cache": true,
+        "**/.venv": true
+    },
+    "git.confirmSync": false,
+    "svelte.enable-ts-plugin": true,
+    "makefile.configureOnOpen": true,
 }

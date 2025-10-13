@@ -65,15 +65,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-eval $(thefuck --alias fk)
-
 export PATH=$PATH:/usr/local/go/bin
 export CC=clang
 export CXX=clang++
 
 alias htop="glances"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
+alias va="source .venv/bin/activate"
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
+export GH_TOKEN=$(cat ~/.gh-token)
