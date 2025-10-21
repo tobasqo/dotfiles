@@ -75,3 +75,5 @@ alias va="source .venv/bin/activate"
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
 export GH_TOKEN=$(cat ~/.gh-token)
+
+. "$HOME/.local/bin/env"
