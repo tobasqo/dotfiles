@@ -87,7 +87,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+Shift-v split h
+bindsym $mod+Shift+v split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -149,6 +149,9 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# toggle debug logging
+bindsym $mod+x debuglog toggle
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -164,16 +167,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 2 ppt
-        bindsym j resize grow height 10 px or 2 ppt
-        bindsym k resize shrink height 10 px or 2 ppt
-        bindsym l resize grow width 10 px or 2 ppt
+        bindsym h resize shrink width 2 px or 2 ppt
+        bindsym j resize grow height 2 px or 2 ppt
+        bindsym k resize shrink height 2 px or 2 ppt
+        bindsym l resize grow width 2 px or 2 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 2 ppt
-        bindsym Down resize grow height 10 px or 2 ppt
-        bindsym Up resize shrink height 10 px or 2 ppt
-        bindsym Right resize grow width 10 px or 2 ppt
+        bindsym Left resize shrink width 2 px or 2 ppt
+        bindsym Down resize grow height 2 px or 2 ppt
+        bindsym Up resize shrink height 2 px or 2 ppt
+        bindsym Right resize grow width 2 px or 2 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -188,11 +191,8 @@ bindsym $mod+r mode "resize"
 bar {
         status_command $HOME/bumblebee-status/bumblebee-status \
         -m spotify cpu nvidiagpu memory disk pulseout battery time date \
-        -p nvidiagpu.format="{temp}°C {mem_used}/{mem_total}MiB" \
-        -p pulsectl.autostart=true pulsectl.showdevicename=true pulsectl.left-click=select_default_device_popup \
-        -p time.format="%H:%M:%S" \
-        -p interval=3s \
-        -t iceberg-dark-powerline \
+        -p nvidiagpu.format="{temp}°C {mem_used}/{mem_total}MiB" pulsectl.autostart=true pulsectl.showdevicename=true pulsectl.left-click=select_default_device_popup time.format="%H:%M:%S" interval=3s \
+        -t iceberg-dark-powerline
         font pango:DejaVu Sans Mono, FontAwesome 10
         position top
 }
