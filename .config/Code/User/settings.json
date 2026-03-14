@@ -7,6 +7,7 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorSurroundingLines": 10,
     "editor.fontSize": 15,
+    "editor.rulers": [80, 88, 100],
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "modifications",
     "diffEditor.ignoreTrimWhitespace": true,
@@ -15,12 +16,28 @@
     "window.newWindowDimensions": "maximized",
     // theme
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "GitHub Dark Dimmed",
     "editor.semanticTokenColorCustomizations": {
         "[Default Dark+]": {
             "enabled": true,
             "rules": {
                 "selfParameter": "#e492de"
+            }
+        },
+        "[GitHub Dark Dimmed]": {
+            "enabled": true,
+            "rules": {
+                "parameter": "#adbac7",
+                "variable": "#c6cdd5",
+                "variable.readonly": "#77bdfb",
+                "constant": "#77bdfb",
+                "variable.defaultLibrary": "#c6cdd5",
+                "property.defaultLibrary": "#adbac7",
+                "function": "#dcbdfb",
+                "module": "#c6cdd5",
+                "selfParameter": "#a2d2fb",
+                "class": "#faa356",
+                "interface": "#faa356",
             }
         }
     },
@@ -32,6 +49,14 @@
             "editorBracketHighlight.foreground4": "#2ac3de",
             "editorBracketHighlight.foreground5": "#7dcfff",
             "editorBracketHighlight.foreground6": "#446db4",
+        },
+        "[GitHub Dark Dimmed]": {
+            "editorBracketHighlight.foreground1": "#cea5fb",
+            "editorBracketHighlight.foreground2": "#77bdfb",
+            "editorBracketHighlight.foreground3": "#a2d2fb",
+            "editorBracketHighlight.foreground4": "#7ce38b",
+            "editorBracketHighlight.foreground5": "#faa356",
+            "editorBracketHighlight.foreground6": "#fa7970",
         }
     },
     "editor.tokenColorCustomizations": {
@@ -39,6 +64,47 @@
             "strings": "#86b874",
             "comments": "#636670",
             "numbers": "#ff9e64"
+        },
+        "[GitHub Dark Dimmed]": {
+            "textMateRules": [
+                {
+                    "scope": "variable.parameter.function.language.special.self.python",
+                    "settings": {
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "storage.type.function.async",
+                    "settings": {
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "punctuation",
+                    "settings": {
+                        "foreground": "#77bdfb"
+                    },
+                },
+                {
+                    "scope": "keyword.operator",
+                    "settings": {
+                        "foreground": "#77bdfb",
+                    },
+                },
+                {
+                    "scope": "keyword.control.flow",
+                    "settings": {
+                        "fontStyle": "italic",
+                    },
+                },
+                {
+                    "scope": "variable.other",
+                    "settings": {
+                        // "foreground": "#77bdfb",
+                        // "fontStyle": "italic"
+                    },
+                },
+            ]
         }
     },
     // git
@@ -120,8 +186,8 @@
         {
             "before": [
                 "<leader>",
-                "r",
-                "n"
+                "c",
+                "r"
             ],
             "commands": [
                 "workbench.action.Rename"
@@ -265,6 +331,24 @@
     "git.confirmSync": false,
     "svelte.enable-ts-plugin": true,
     "makefile.configureOnOpen": true,
-    "window.zoomLevel": 1.25,
+    "window.zoomLevel": 0.6,
     "chat.editor.wordWrap": "on",
+    "editor.wordWrap": "on",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "cSpell.userWords": [
+        "Domuwa",
+        "emph",
+        "ESOL",
+        "HTMX",
+        "Jaśkowski",
+        "Keras",
+        "Librosa",
+        "Plotly",
+        "Pydantic",
+        "Pytest",
+        "Qdrant",
+        "Scikit",
+        "Szymon",
+        "Typst"
+    ],
 }

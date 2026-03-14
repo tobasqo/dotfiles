@@ -77,3 +77,5 @@ fpath+=~/.zfunc; autoload -Uz compinit; compinit
 export GH_TOKEN=$(cat ~/.gh-token)
 
 . "$HOME/.local/bin/env"
+
+export PATH=$HOME/.cargo/bin:$PATH

@@ -61,6 +61,9 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       require("github-theme").setup({
+        options = {
+          transparent = true,
+        },
         -- override syntax groups
         specs = {
           github_dark_dimmed = {
@@ -74,6 +77,7 @@ return {
             ["@punctuation.delimiter"] = { fg = "#77bdfb" },
             ["@parameter"] = { fg = "red" },
             ["@module.python"] = { fg = "#adbac7" },
+            ["@variable.builtin.python"] = { fg = "#a2d2fb", style = "italic" },
           },
         },
       })
