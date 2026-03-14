@@ -67,4 +67,6 @@ y = 0
 [general]
 live_config_reload = true
 
-import = ["~/.config/alacritty/themes/themes/github_dark.toml"]
+# import = ["~/.config/alacritty/themes/themes/github_dark.toml"]
+import = ["~/.config/alacritty/themes/themes/tokyo_night.toml"]
+# import = ["~/.config/alacritty/themes/themes/one_dark.toml"]

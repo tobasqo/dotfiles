@@ -70,6 +70,7 @@ export CC=clang
 export CXX=clang++
 
 alias htop="glances"
+alias cat="batcat --theme tokyonight_storm"
 
 alias va="source .venv/bin/activate"
 

@@ -54,6 +54,17 @@ return {
   --   end,
   -- },
   {
+    "neanias/everforest-nvim",
+    version = false,
+    lazy = false,
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      require("everforest").setup({
+        -- Your config here
+      })
+    end,
+  },
+  {
     -- help github-nvim-theme
     "projekt0n/github-nvim-theme",
     name = "github-theme",
