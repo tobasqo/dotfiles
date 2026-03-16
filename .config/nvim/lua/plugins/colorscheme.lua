@@ -89,6 +89,7 @@ return {
             ["@parameter"] = { fg = "red" },
             ["@module.python"] = { fg = "#adbac7" },
             ["@variable.builtin.python"] = { fg = "#a2d2fb", style = "italic" },
+            ["@keyword.exception.python"] = { fg = "#f47067" },
           },
         },
       })
