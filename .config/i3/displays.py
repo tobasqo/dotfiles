@@ -33,6 +33,7 @@ def set_primary_screen(screen: str) -> None:
     if screen == "DP-1-2":
         mode = "5120x1440"
         rate = 165
+        subprocess.run(["xrandr", "--output", "eDP-1", "--off"])
     else:
         mode = "2560x1600"
         rate = 165
