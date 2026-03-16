@@ -80,3 +80,5 @@ export GH_TOKEN=$(cat ~/.gh-token)
 . "$HOME/.local/bin/env"
 
 export PATH=$HOME/.cargo/bin:$PATH
+export PYPI_TOKEN=$(cat ~/.pypi-token)
+export TEST_PYPI_TOKEN=$(cat ~/.test-pypi-token)
