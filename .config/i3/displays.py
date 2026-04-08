@@ -2,7 +2,7 @@
 import logging
 import subprocess
 
-FALLBACK_SCREEN = "eDP-1"
+FALLBACK_SCREEN = "eDP"
 
 logger = logging.getLogger(__name__)
 
